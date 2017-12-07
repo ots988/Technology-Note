@@ -1,0 +1,88 @@
+SE主要用于桌面程序,控制台开发(JFC)
+EE企业级开发(JSP,EJB)
+ME嵌入式开发(手机,小家电)  
+
+经常有同学会在.NET、C#和ASP.NET这三者之间区别不清楚，到底它们之间有什么联系呢？在这里我给大家归纳如下：
+
+      1、.NET是一个平台，一个抽象的平台的概念。
+
+           .NET平台其本身实现的方式其实还是库，抽象层面上来看是一个平台。
+
+           本人理解的.NET核心就是.NET Framwork。
+
+           .NET Framework包括两个关键组成元素：
+
+                   a.Common Language Runtime，公共语言运行时（CLR）-提供内在管理，代码安全性检测等功能
+
+                   b..NET Framework Class Library，.NET框架类库（FLC）-提供大量应用类库，提高开发效率　　
+
+           学习.NET Framework 是所有.NET 开发人员都必须的，否则开发.NET程序永远都是停留在‘外功’的招式，NET Framework 是.NET开发高手的‘内功’修行之一。　
+
+       2、C#是一个程序设计语言，仅仅是一个语言。　　
+
+            程序设计语言仅仅是为了方便开发人员和计算机沟通的工具，虽然C#语法相对C和C++要多一些，但是相对来看C#语法都比较固定，这样使用起来却都很容易。我认可一位朋友说的，C#的语法更严谨！　　
+
+            这里回过来看看.NET和C#的关系，不得不提的是.NET程序的执行过程。　　
+
+            C#符合.NET CLR中的公共语言运行规范。CLS:common language specification，当然所有的.NET Language都是符合这个规范的例如：VB.NET、XAML和C++/CLI....等等。　　
+
+            C#需要符合.NET CLS，是因为.NET CLR和JAVA 虚拟机类似，有一个中间语言共机器来执行。所有不同语言的.NET代码在执行前会被编译成同样的中间语言(MSIL)，所以所有.NET支持语言都必须符合符合CLS规范。　　
+
+            P.S：如果做.NET 3.0 XAML开发的朋友，可以尝试下ildasm.exe看看XAML的应用程序，会发现原来XAML其实很简单。 　
+
+       3、ASP.NET是一个网站开发的技术，仅仅是.NET框架中的一个应用模型。　　
+
+            用微软公司ASP.NET快速入门中的一句话来解释，ASP.NET 是用于生成基于Web的应用程序的内容丰富的编程框架。
+
+
+java笔试题多做
+Apache
+设计模式：  看看部门培训
+github
+jvm 线程日志 
+zbus
+java编程的联系还是要放在实战中
+搞清spring rest风格
+java build path 详解
+Executor框架来创建线程池
+spring 配置文件详解
+jvm内存原理
+
+
+
+内存
+用虚拟机有什么好处
+Queue
+静态方法内部，只能用静态成员
+HashMap的一些重要的特性是它的容量(capacity)，负载因子(load factor)和扩容极限(threshold resizing)。
+PriorityQueue是一个基于优先级堆的无界队列，优先队列不允许空值，而且不支持non-comparable（不可比较）的对象
+队列是遵循先进先出  
+serializable
+实现hashCode()和equals()方法
+序列化
+AOP
+transient 
+1）一旦变量被transient修饰，变量将不再是对象持久化的一部分，该变量内容在序列化后无法获得访问。
+2）transient关键字只能修饰变量，而不能修饰方法和类。注意，本地变量是不能被transient关键字修饰的。变量如果是用户自定义类变量，则该类需要实现Serializable接口。
+3）被transient关键字修饰的变量不再能被序列化，一个静态变量不管是否被transient修饰，均不能被序列化。
+volatile 已经读了就固定了  保证可见性和禁止指令重排序
+使用volatile必须具备以下2个条件：
+1）对变量的写操作不依赖于当前值
+2）该变量没有包含在具有其他变量的不变式中
+寄存器
+hashCode和equals
+Socket和ServerSocket
+zai和堆
+wait和sleep的区别
+enum 枚举
+接口的属性都是公共的,静态的,最终的
+API查阅
+关于JVM内存管理的一些建议
+1、手动将生成的无用对象，中间对象置为null，加快内存回收。
+2、对象池技术如果生成的对象是可重用的对象，只是其中的属性不同时，可以考虑采用对象池来较少对象的生成。如果有空闲的对象就从对象池中取出使用，没有再生成新的对象，大大提高了对象的复用率。
+3、JVM调优通过配置JVM的参数来提高垃圾回收的速度，如果在没有出现内存泄露且上面两种办法都不能保证JVM内存回收时，可以考虑采用JVM调优的方式来解决，不过一定要经过实体机的长期测试，因为不同的参数可能引起不同的效果。如-Xnoclassgc参数等。
+
+java.lnag.Object中对hashCode的约定：
+   1. 在一个应用程序执行期间，如果一个对象的equals方法做比较所用到的信息没有被修改的话，则对该对象调用hashCode方法多次，它必须始终如一地返回同一个整数。
+   2. 如果两个对象根据equals(Object o)方法是相等的，则调用这两个对象中任一对象的hashCode方法必须产生相同的整数结果。
+   3. 如果两个对象根据equals(Object o)方法是不相等的，则调用这两个对象中任一个对象的hashCode方法，不要求产生不同的整数结果。但如果能不同，则可能提高散列表的性能。
