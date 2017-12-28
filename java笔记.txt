@@ -4,46 +4,57 @@ ME嵌入式开发(手机,小家电)
 
 经常有同学会在.NET、C#和ASP.NET这三者之间区别不清楚，到底它们之间有什么联系呢？在这里我给大家归纳如下：
 
-      1、.NET是一个平台，一个抽象的平台的概念。
+1、.NET是一个平台，一个抽象的平台的概念。
 
-           .NET平台其本身实现的方式其实还是库，抽象层面上来看是一个平台。
+   .NET平台其本身实现的方式其实还是库，抽象层面上来看是一个平台。
 
-           本人理解的.NET核心就是.NET Framwork。
+   本人理解的.NET核心就是.NET Framwork。
 
-           .NET Framework包括两个关键组成元素：
+   .NET Framework包括两个关键组成元素：
 
-                   a.Common Language Runtime，公共语言运行时（CLR）-提供内在管理，代码安全性检测等功能
+		   a.Common Language Runtime，公共语言运行时（CLR）-提供内在管理，代码安全性检测等功能
 
-                   b..NET Framework Class Library，.NET框架类库（FLC）-提供大量应用类库，提高开发效率　　
+		   b..NET Framework Class Library，.NET框架类库（FLC）-提供大量应用类库，提高开发效率　　
 
-           学习.NET Framework 是所有.NET 开发人员都必须的，否则开发.NET程序永远都是停留在‘外功’的招式，NET Framework 是.NET开发高手的‘内功’修行之一。　
+   学习.NET Framework 是所有.NET 开发人员都必须的，否则开发.NET程序永远都是停留在‘外功’的招式，NET Framework 是.NET开发高手的‘内功’修行之一。　
 
-       2、C#是一个程序设计语言，仅仅是一个语言。　　
+2、C#是一个程序设计语言，仅仅是一个语言。　　
 
-            程序设计语言仅仅是为了方便开发人员和计算机沟通的工具，虽然C#语法相对C和C++要多一些，但是相对来看C#语法都比较固定，这样使用起来却都很容易。我认可一位朋友说的，C#的语法更严谨！　　
+	程序设计语言仅仅是为了方便开发人员和计算机沟通的工具，虽然C#语法相对C和C++要多一些，但是相对来看C#语法都比较固定，这样使用起来却都很容易。我认可一位朋友说的，C#的语法更严谨！　　
 
-            这里回过来看看.NET和C#的关系，不得不提的是.NET程序的执行过程。　　
+	这里回过来看看.NET和C#的关系，不得不提的是.NET程序的执行过程。　　
 
-            C#符合.NET CLR中的公共语言运行规范。CLS:common language specification，当然所有的.NET Language都是符合这个规范的例如：VB.NET、XAML和C++/CLI....等等。　　
+	C#符合.NET CLR中的公共语言运行规范。CLS:common language specification，当然所有的.NET Language都是符合这个规范的例如：VB.NET、XAML和C++/CLI....等等。　　
 
-            C#需要符合.NET CLS，是因为.NET CLR和JAVA 虚拟机类似，有一个中间语言共机器来执行。所有不同语言的.NET代码在执行前会被编译成同样的中间语言(MSIL)，所以所有.NET支持语言都必须符合符合CLS规范。　　
+	C#需要符合.NET CLS，是因为.NET CLR和JAVA 虚拟机类似，有一个中间语言共机器来执行。所有不同语言的.NET代码在执行前会被编译成同样的中间语言(MSIL)，所以所有.NET支持语言都必须符合符合CLS规范。　　
 
-            P.S：如果做.NET 3.0 XAML开发的朋友，可以尝试下ildasm.exe看看XAML的应用程序，会发现原来XAML其实很简单。 　
+	P.S：如果做.NET 3.0 XAML开发的朋友，可以尝试下ildasm.exe看看XAML的应用程序，会发现原来XAML其实很简单。 　
 
-       3、ASP.NET是一个网站开发的技术，仅仅是.NET框架中的一个应用模型。　　
+3、ASP.NET是一个网站开发的技术，仅仅是.NET框架中的一个应用模型。　　
 
-            用微软公司ASP.NET快速入门中的一句话来解释，ASP.NET 是用于生成基于Web的应用程序的内容丰富的编程框架。
+	用微软公司ASP.NET快速入门中的一句话来解释，ASP.NET 是用于生成基于Web的应用程序的内容丰富的编程框架。
 
 
 java笔试题多做
+多写多读代码，遇到问题不能努力解决，自己总归有错
 设计模式
 搞清spring rest风格
 spring 配置文件详解
 jvm内存原理
 java 语法格式错误，疑难点纠正
 基础api
+数据库：结构，nosql，
+imooc上看设计模式
+编程艺术
+性能优化
+java抱死
+解决问题的编程思路，对语言的理解
 
 
+按键精灵
+mmv--mvc的扩展
+查阅github，发现感兴趣的资源
+数量多用队列和缓存
 zbus
 AWT组件
 java build path 详解
@@ -83,17 +94,18 @@ wait和sleep的区别
 enum 枚举
 接口的属性都是公共的,静态的,最终的
 API查阅
+IETester
+installanywhere
 关于JVM内存管理的一些建议
 1、手动将生成的无用对象，中间对象置为null，加快内存回收。
 2、对象池技术如果生成的对象是可重用的对象，只是其中的属性不同时，可以考虑采用对象池来较少对象的生成。如果有空闲的对象就从对象池中取出使用，没有再生成新的对象，大大提高了对象的复用率。
 3、JVM调优通过配置JVM的参数来提高垃圾回收的速度，如果在没有出现内存泄露且上面两种办法都不能保证JVM内存回收时，可以考虑采用JVM调优的方式来解决，不过一定要经过实体机的长期测试，因为不同的参数可能引起不同的效果。如-Xnoclassgc参数等。
-
 java.lnag.Object中对hashCode的约定：
    1. 在一个应用程序执行期间，如果一个对象的equals方法做比较所用到的信息没有被修改的话，则对该对象调用hashCode方法多次，它必须始终如一地返回同一个整数。
    2. 如果两个对象根据equals(Object o)方法是相等的，则调用这两个对象中任一对象的hashCode方法必须产生相同的整数结果。
    3. 如果两个对象根据equals(Object o)方法是不相等的，则调用这两个对象中任一个对象的hashCode方法，不要求产生不同的整数结果。但如果能不同，则可能提高散列表的性能。
 
-   修饰符顺序
+修饰符顺序
 三种类的修饰符
 public、abstract、final
 三种构造函数的修饰符
@@ -105,4 +117,16 @@ final
 八种方法的修饰符
 public、protected、private、static、final、abstract、native、synchronized
 
-　　
+工作：
+1.提问问员工以前做过什么培训，比抽象得问做过什么培训更好
+2.
+
+svg：
+1.图层
+2.一般用钢笔画
+3.删除原有图层，不闭合有异常
+4.文档颜色用CMYK
+
+js：
+闭包，，内存溢出
+原型和prot 分开，改动prototype的影响
